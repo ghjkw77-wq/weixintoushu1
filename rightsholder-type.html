@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>选择权利人类别</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 权利人类别选择页面 -->
+    <div class="container rightsholder-type-container">
+        <div class="rightsholder-type-title">请选择权利人类别</div>
+        
+        <div class="rightsholder-type-list">
+            <div class="rightsholder-type-item">
+                <span>权利人是个人</span>
+                <span class="arrow">></span>
+            </div>
+            <div class="rightsholder-type-item">
+                <span>权利人是公司或组织</span>
+                <span class="arrow">></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 为权利人类别选项添加点击事件
+        const rightsholderTypeItems = document.querySelectorAll('.rightsholder-type-item');
+        rightsholderTypeItems.forEach(function(item) {
+            item.addEventListener('click', function() {
+                window.location.href = 'submit.html';
+            });
+        });
+    </script>
+</body>
+</html>

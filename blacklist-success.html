@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>已提交</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container blacklist-success-container">
+        <div class="blacklist-success-content">
+            <div class="blacklist-success-icon">✓</div>
+            <div class="blacklist-success-title">已提交</div>
+            <div class="blacklist-success-desc">已经把对方拉黑，你将不再接收到对方的消息。如果对方是你的微信好友，你可以在"我-设置-隐私-通讯录黑名单"修改黑名单设置</div>
+            <button class="blacklist-success-close-btn">关闭</button>
+        </div>
+    </div>
+
+    <script>
+        // 获取元素
+        const blacklistSuccessCloseBtn = document.querySelector('.blacklist-success-close-btn');
+        
+        // 关闭按钮点击事件
+        function closeAndExit() {
+            // 退出所有页面
+            if (typeof WeixinJSBridge !== 'undefined') {
+                // 微信环境下关闭当前窗口
+                WeixinJSBridge.call('closeWindow');
+            } else {
+                // 其他环境下关闭当前窗口或跳转到空白页
+                window.close();
+                // 如果window.close()不生效，使用以下备选方案
+                setTimeout(function() {
+                    window.location.href = 'about:blank';
+                }, 100);
+            }
+        }
+        
+        // 点击底部关闭按钮
+        blacklistSuccessCloseBtn.addEventListener('click', closeAndExit);
+    </script>
+</body>
+</html>

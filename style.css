@@ -1,0 +1,840 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #f7f7f7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    background-color: #fff;
+    position: relative;
+}
+
+/* 头部样式 */
+.header {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.close-btn {
+    font-size: 28px;
+    color: #666;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 标题样式 */
+.title {
+    padding: 12px 15px;
+    font-size: 14px;
+    color: #999;
+    background-color: #fff;
+    border-bottom: 1px solid #f7f7f7;
+}
+
+/* 原因列表样式 */
+.reason-list {
+    background-color: #fff;
+}
+
+.reason-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #f7f7f7;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+}
+
+.arrow {
+    font-size: 18px;
+    color: #f0f0f0;
+}
+
+/* 底部样式 */
+.footer {
+    padding: 12px 15px;
+    background-color: #f7f7f7;
+    margin-top: 0;
+    border-top: none;
+    border-bottom: none;
+}
+
+.blacklist-info {
+    text-align: left;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.notice-link {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+    text-decoration: none;
+}
+
+/* 投诉须知页面样式 */
+.header-title {
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+    margin: 0 auto;
+}
+
+.back-btn {
+    font-size: 24px;
+    color: #666;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notice-container .header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.notice-content {
+    padding: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    min-height: calc(100vh - 44px);
+    overflow-y: auto;
+}
+
+.notice-content p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.notice-content p:last-child {
+    margin-bottom: 0;
+}
+
+.notice-content strong {
+    font-weight: bold;
+    color: #333;
+}
+
+.notice-content h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.notice-content h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 20px 0 15px 0;
+    line-height: 1.5;
+}
+
+.notice-content .guide-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 4px;
+    display: block;
+}
+
+/* 安全验证页面样式 */
+.security-title {
+    padding: 15px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+}
+
+.security-list {
+    background-color: #fff;
+}
+
+.security-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 16px;
+    color: #333;
+}
+
+.security-knowledge {
+    padding: 15px;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.knowledge-link {
+    font-size: 14px;
+    color: #07c160;
+    text-decoration: none;
+}
+
+.security-footer {
+    padding: 15px;
+    background-color: #fff;
+    margin-top: 10px;
+    border-top: none;
+}
+
+/* 侵权提示页面样式 */
+.infringement-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+.infringement-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    flex: 1;
+    text-align: center;
+}
+
+.info-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #07c160;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.infringement-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.infringement-text {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    text-align: left;
+    max-width: 400px;
+}
+
+.infringement-text p {
+    margin-bottom: 10px;
+}
+
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.i-know-btn {
+    width: 100%;
+    height: 44px;
+    background-color: #07c160;
+    color: #fff;
+    border: none;
+    border-radius: 22px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.i-know-btn:active {
+    opacity: 0.8;
+}
+
+.continue-btn {
+    width: 100%;
+    height: 44px;
+    background-color: #fff;
+    color: #07c160;
+    border: 1px solid #07c160;
+    border-radius: 22px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.continue-btn:active {
+    background-color: #f0f9f4;
+}
+
+/* 侵权投诉须知页面样式 */
+.infringement-notice-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.infringement-notice-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 1001;
+}
+
+.infringement-notice-back {
+    font-size: 24px;
+    color: #666;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.infringement-notice-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 auto;
+}
+
+.infringement-notice-content {
+    padding: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.infringement-notice-content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 20px 0 15px 0;
+}
+
+.infringement-notice-content p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.infringement-notice-link {
+    color: #07c160;
+    text-decoration: none;
+}
+
+.infringement-notice-link:active {
+    opacity: 0.8;
+}
+
+/* 投诉内容选择页面样式 */
+.complaint-type-title {
+    padding: 15px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+}
+
+.complaint-type-list {
+    background-color: #fff;
+}
+
+.complaint-type-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* 投诉朋友圈内容页面样式 */
+.friend-circle-container {
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.friend-circle-content {
+    padding: 20px;
+}
+
+.friend-circle-text {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.friend-circle-text p {
+    margin-bottom: 15px;
+}
+
+.friend-circle-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* 权利人类别选择页面样式 */
+.rightsholder-type-title {
+    padding: 15px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+}
+
+.rightsholder-type-list {
+    background-color: #fff;
+}
+
+.rightsholder-type-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* 违法内容警示页面样式 */
+.warning-title {
+    padding: 15px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+}
+
+.warning-list {
+    background-color: #fff;
+}
+
+.warning-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 16px;
+    color: #333;
+}
+
+.warning-footer {
+    padding: 15px;
+    background-color: #fff;
+    margin-top: 10px;
+    border-top: none;
+}
+
+/* 图片展示页面样式 */
+.evidence-section {
+    background-color: #fff;
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.evidence-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.evidence-title {
+    font-size: 16px;
+    color: #333;
+}
+
+.evidence-count {
+    font-size: 14px;
+    color: #999;
+}
+
+.evidence-desc {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.image-upload-area {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.image-preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.image-preview-item {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+}
+
+.image-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-delete-btn {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+    background-color: #ff4d4f;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+    border: 2px solid #fff;
+}
+
+.image-upload-btn {
+    width: 80px;
+    height: 80px;
+    border: 1px dashed #e0e0e0;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fafafa;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.image-upload-btn:hover {
+    border-color: #07c160;
+    background-color: #f0f9f4;
+}
+
+.image-upload-btn:has(+ .image-preview-item) {
+    margin-top: 0;
+}
+
+.plus-icon {
+    font-size: 32px;
+    color: #999;
+}
+
+.complaint-content-area {
+    margin-top: 10px;
+    position: relative;
+}
+
+.complaint-textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.5;
+    resize: none;
+    outline: none;
+    font-family: inherit;
+}
+
+.complaint-textarea::placeholder {
+    color: #999;
+}
+
+.contact-input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.5;
+    outline: none;
+    font-family: inherit;
+}
+
+.contact-input::placeholder {
+    color: #999;
+}
+
+.word-count {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
+    color: #999;
+}
+
+.submit-btn-container {
+    padding: 15px;
+    background-color: #fff;
+    margin-top: 10px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.submit-btn {
+    width: 100%;
+    height: 44px;
+    background-color: #e0e0e0;
+    color: #999;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: not-allowed;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:enabled {
+    background-color: #07c160;
+    color: #fff;
+    cursor: pointer;
+}
+
+.submit-btn:enabled:active {
+    opacity: 0.8;
+}
+
+/* 提交成功提示样式 */
+.success-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.success-content {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-align: center;
+    width: 80%;
+    max-width: 320px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.success-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #07c160;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin: 0 auto 20px;
+}
+
+.success-text {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.success-confirm-btn {
+    width: 100%;
+    height: 44px;
+    background-color: #07c160;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.success-confirm-btn:active {
+    opacity: 0.8;
+}
+
+/* 黑名单提交成功页面样式 */
+.blacklist-success-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.blacklist-success-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.blacklist-success-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #07c160;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.blacklist-success-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.blacklist-success-desc {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.blacklist-success-close-btn {
+    width: 200px;
+    height: 44px;
+    background-color: #07c160;
+    color: #fff;
+    border: none;
+    border-radius: 22px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.blacklist-success-close-btn:active {
+    opacity: 0.8;
+}
+
+/* 欺诈内容分类选择页面样式 */
+.fraud-footer {
+    padding: 15px;
+    background-color: #fff;
+    margin-top: 10px;
+    border-top: none;
+}
+
+.fraud-guide {
+    text-align: left;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+/* 支付方式选择页面样式 */
+.payment-list {
+    background-color: #fff;
+}
+
+.payment-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 375px) {
+    .reason-item {
+        padding: 12px 15px;
+        font-size: 15px;
+    }
+    
+    .title {
+        padding: 12px 15px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .reason-item {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    
+    .title {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    
+    .close-btn {
+        font-size: 24px;
+        width: 24px;
+        height: 24px;
+    }
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>选择诈骗内容类型</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 欺诈内容分类选择页面 -->
+    <div class="container" id="fraud-page">
+        <div class="title">请选择哪一类诈骗内容：</div>
+        <div class="reason-list">
+            <div class="reason-item">
+                <span>金融诈骗（贷款/提额/代开/套现等）</span>
+                <span class="arrow">></span>
+            </div>
+            <div class="reason-item">
+                <span>网络兼职刷单诈骗</span>
+                <span class="arrow">></span>
+            </div>
+            <div class="reason-item">
+                <span>返利诈骗</span>
+                <span class="arrow">></span>
+            </div>
+            <div class="reason-item">
+                <span>网络交友诈骗</span>
+                <span class="arrow">></span>
+            </div>
+            <div class="reason-item">
+                <span>虚假投资理财诈骗</span>
+                <span class="arrow">></span>
+            </div>
+            <div class="reason-item">
+                <span>赌博诈骗</span>
+                <span class="arrow">></span>
+            </div>
+            <div class="reason-item">
+                <span>收款不发货</span>
+                <span class="arrow">></span>
+            </div>
+            <div class="reason-item">
+                <span>仿冒他人诈骗</span>
+                <span class="arrow">></span>
+            </div>
+            <div class="reason-item">
+                <span>免费送诈骗</span>
+                <span class="arrow">></span>
+            </div>
+            <div class="reason-item">
+                <span>游戏相关诈骗（代练/充值等）</span>
+                <span class="arrow">></span>
+            </div>
+            <div class="reason-item">
+                <span>其他诈骗行为</span>
+                <span class="arrow">></span>
+            </div>
+        </div>
+        <div class="footer fraud-footer">
+            <div class="fraud-guide">网络诈骗投诉指引</div>
+            <a href="#" class="notice-link" id="fraud-notice-link">投诉须知</a>
+        </div>
+    </div>
+
+    <!-- 投诉须知页面 -->
+    <div class="container notice-container" id="fraud-notice-page" style="display: none;">
+        <div class="header">
+            <div class="back-btn" id="fraud-back">←</div>
+            <div class="header-title">投诉须知</div>
+        </div>
+        <div class="notice-content">
+            <p>你应保证你的投诉行为基于善意，并代表你本人真实意思。腾讯作为中立的平台服务者，收到你投诉后，会尽快按照相关法律法规的规定独立判断并进行处理。腾讯将会采取合理的措施保护你的个人信息；除法律法规规定的情形外，未经用户许可腾讯不会向第三方公开、透露你的个人信息。</p>
+            <p>根据《中华人民共和国民法典》的规定，权利人在通知网络服务提供者时应当提供权利人的真实身份信息。因此，当你提交侵权投诉及冒充他人投诉时，我们根据你的主体类型，收集你的相关信息<strong>（含敏感个人信息），包括你的姓名或名称、证件号码或者组织证件号、证件正反面照片、公司或组织证件照片，收集前述内容的目的在于核验你的身份信息的真实性。</strong>如果你委托代理人进行投诉，我们还将收集<strong>代理人的姓名、证件号码、证件正反面照片、授权委托书照片</strong>，收集前述信息在于核验代理人信息的真实性。你可以拒绝提供，如果拒绝提供，我们可能无法对你的投诉进行评估，但不影响你对微信其他功能的正常使用。</p>
+            <p>此外，为了对你的投诉予以评估，我们也会收集你主动提交的聊天记录、投诉内容、补充证明材料照片。你可以拒绝提供，如果拒绝提供，我们可能无法对你的投诉进行充分评估，但不影响你对微信其他功能的正常使用。</p>
+            <p>若你提交的是侵权投诉，请注意：</p>
+            <p>1. 权利人及其代理人知悉并了解侵权投诉是一项严肃的法律行为，平台将根据法律法规、投诉内容和证据等进行评估审核，尽力保障每一位权利人的合法权益。但侵权投诉的评估审核结果与投诉次数无关联，多次或多人重复或批量投诉并不能改变或提升侵权投诉通过率。</p>
+            <p>2. 为了更好地维护权利人的合法权益及正常侵权投诉，保障系统安全及正常运作，权利人及其代理人不得采取可能会严重影响其他用户合法权益、阻碍平台系统的安全正常运作的方式进行投诉，包括但不限于使用外挂、插件、第三方软件、系统、自动化程序等进行投诉等。</p>
+            <p>一经发现，上述投诉将被平台视为无效投诉。同时不排除会采取包括但不限于限制频次等、记入非正常投诉名单、调整投诉处理顺序、直至直接拒绝、处罚投诉账号等特殊处理机制或限制、处理措施。</p>
+            <p>3. 为各权利人的合法权益得以保障，相关投诉能有效提交，如平台有合理理由相信投诉存在以下情形，将有权根据实际情况调整处理方式。包括但不限于：</p>
+            <p>（1）明知、应知不构成侵权或明显缺乏权利基础和事实依据而进行投诉；</p>
+            <p>（2）平台已告知欠缺处理依据仍不断重复投诉且无实质补充等情形；</p>
+            <p>（3）多次或大量提交侵权投诉，但整体通过率低或涉嫌滥用投诉；</p>
+            <p>（4）非合理且正当理由，对平台正常处理其他权利人侵权投诉造成不利影响的情形；</p>
+            <p>（5）其他平台有理由认为存在不合理、滥用投诉的情形。</p>
+            <p>一经发现，将不排除采取特殊的处理机制或限制措施，包括但不限于限制频次、记入非正常投诉名单、调整侵权投诉单处理顺序等，由此将可能导致侵权投诉不可高频提交、无法通过或审核评估时效延长等效果。</p>
+            <p>4. 如由于特殊原因造成平台处理能力过载，包括但不限于网络因素、设备原因、投诉量短期激增等，平台的处理与反馈也可能会有时效调整或迟延。</p>
+        </div>
+    </div>
+
+    <!-- 防止网络诈骗页面 -->
+    <div class="container notice-container" id="fraud-guide-page" style="display: none;">
+        <div class="header">
+            <div class="back-btn" id="fraud-guide-back">←</div>
+            <div class="header-title">如何防止网络诈骗</div>
+        </div>
+        <div class="notice-content">
+            <h3>如何防止网络诈骗</h3>
+            <p>网络诈骗是指犯罪分子通过编造虚假信息，设置骗局，对受害人实施远程、非接触式诈骗，诱使受害人给犯罪分子打款或转账的犯罪行为。</p>
+            <p>近年来互联网上各类安全事件屡屡发生，个人信息及隐私数据也常有泄露，不法分子窃取用户私人信息后，往往会进一步进行各类诈骗，盗取用户财产。</p>
+            <p>微信用户可通过以下指引，了解几种常见的诈骗方式，提高防范意识，杜绝此类网络欺诈。</p>
+            
+            <h4>常见网络骗局</h4>
+            <p>1.刷单骗局：骗子通常利用扫码免费送、招聘兼职等方式将受害人拉入“做任务”的群聊，在群聊中发布任务诱导受害人完成并返还小额佣金，以此诱惑受害人进一步参与更大金额的刷单任务，而后再以任务未完成、系统维护等原因拒绝返现，实施欺诈。</p>
+            <img src="网络诈骗投诉指引图片/图片1.jpg" alt="刷单骗局示例" class="guide-image">
+            <p>2.交友骗局：骗子通常以有钱有颜有头脑的完美人设出现，在各类社交平台上寻找目标添加好友。先是在每日的嘘寒问暖中与受害人建立感情联系，接着通过诱导受害人使用虚假平台投资博彩或直接索取礼品礼金等方式实施欺诈。</p>
+            <img src="网络诈骗投诉指引图片/图片2.jpg" alt="交友骗局示例" class="guide-image">
+            <p>3.交易骗局：骗子通常通过网络发布大量低价虚假产品信息（或以各种名义诱骗用户进行资金转账）吸引用户，以先付款后才能发货为由，要求用户先行支付货款。等付款后，骗子便将受害人拉黑删除，完成欺诈。</p>
+            <img src="网络诈骗投诉指引图片/图片3.jpg" alt="交易骗局示例" class="guide-image">
+            
+            <h4>温馨提醒</h4>
+            <p>不要轻信诈骗分子的说辞，不贪图小利。刷单不仅容易遭遇欺诈，还属于违法行为，请大家切勿参与。</p>
+            <p>网络交友需谨慎，在无法面见对方，确认核实对方身份之前，都要保持警惕。不要轻易相信对方说辞，避免向对方透露重要的个人信息，更不要与对方产生任何交易往来。</p>
+            <p>网上购物，请尽量选择正规官方平台，避免脱离平台私下交易。</p>
+            <p>若不幸遭遇欺诈，请及时保留相关证据，向公安机关报警处理。</p>
+            <p>另外，微信各个场景中的“安全提醒”也是辨别欺诈行为的重要途径之一，根据用户当前被骗风险程度，我们对有可能造成风险的场景，会进行安全提示。比如：</p>
+            <p>微信支付或转账时的风险警告</p>
+            <img src="网络诈骗投诉指引图片/图片4.jpg" alt="微信支付风险警告" class="guide-image">
+            <p>添加陌生好友聊天时的身份确认提醒</p>
+            <img src="网络诈骗投诉指引图片/图片5.jpg" alt="身份确认提醒" class="guide-image">
+            <p>打开有未知风险的外部链接或跳转第三方页面时</p>
+            <img src="网络诈骗投诉指引图片/图片6.jpg" alt="外部链接风险提示" class="guide-image">
+            
+            <h4>对抗欺诈，举报有道</h4>
+            <p>为了避免更多人被骗，若在微信平台内发现有疑似欺诈行为，可通过微信客户端、腾讯卫士小程序进行举报。我们接到举报会尽快完成审核，对利用微信实施欺诈行为的用户，一经确认，将对违规账号进行梯度处罚直至封停处理，并将审核结果反馈给用户。</p>
+            <p>1.投诉个人用户：在用户的“详细资料”页面中点击右上角的“...”键→点击“投诉”即可</p>
+            <img src="网络诈骗投诉指引图片/图片7.jpg" alt="投诉个人用户" class="guide-image">
+            <p>2.投诉微信群：点击微信群右上角的“...”键→点击“投诉”即可</p>
+            <img src="网络诈骗投诉指引图片/图片8.jpg" alt="投诉微信群" class="guide-image">
+            <p>3.通过小程序举报：搜索“腾讯卫士”小程序→选择举报类别→填写举报内容→点击“提交”即可</p>
+            <img src="网络诈骗投诉指引图片/图片9.jpg" alt="通过小程序举报" class="guide-image">
+            <p>微信一直致力于为用户提供绿色、健康的生态环境，微信用户在使用微信账号过程中不得违反现行法律法规。对于用户提供的举报证据，微信都将秉承公正负责的态度审查。一经核实，微信将按照相关法律法规及用户协议规则，对违规行为进行处理，并配合有权机关维护微信用户及其他主体的合法权益。</p>
+            <p>面对网络欺诈，微信诚邀大家与我们一起，共建安全、健康、绿色的平台生态环境！</p>
+        </div>
+    </div>
+
+    <script>
+        // 获取元素
+        const fraudNoticeLink = document.getElementById('fraud-notice-link');
+        const fraudPage = document.getElementById('fraud-page');
+        const fraudNoticePage = document.getElementById('fraud-notice-page');
+        const fraudBackBtn = document.getElementById('fraud-back');
+        const fraudGuide = document.querySelector('.fraud-guide');
+        
+        // 防止网络诈骗页面相关元素
+        const fraudGuidePage = document.getElementById('fraud-guide-page');
+        const fraudGuideBackBtn = document.getElementById('fraud-guide-back');
+        
+        // 跳转函数
+        function jumpToPayment() {
+            window.location.href = 'payment.html';
+        }
+
+        // 为所有诈骗类型选项添加点击事件
+        const reasonItems = document.querySelectorAll('.reason-item');
+        reasonItems.forEach(function(item) {
+            item.addEventListener('click', jumpToPayment);
+        });
+
+        // 为网络诈骗投诉指引添加点击事件，显示防止网络诈骗页面
+        fraudGuide.addEventListener('click', function() {
+            fraudPage.style.display = 'none';
+            fraudGuidePage.style.display = 'block';
+        });
+
+        // 为投诉须知链接添加点击事件，显示完整投诉须知内容
+        fraudNoticeLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            fraudPage.style.display = 'none';
+            fraudNoticePage.style.display = 'block';
+        });
+
+        // 点击返回按钮，返回欺诈内容选择页
+        fraudBackBtn.addEventListener('click', function() {
+            fraudNoticePage.style.display = 'none';
+            fraudPage.style.display = 'block';
+        });
+
+        // 点击防止网络诈骗页面的返回按钮，返回欺诈内容选择页
+        fraudGuideBackBtn.addEventListener('click', function() {
+            fraudGuidePage.style.display = 'none';
+            fraudPage.style.display = 'block';
+        });
+    </script>
+</body>
+</html>

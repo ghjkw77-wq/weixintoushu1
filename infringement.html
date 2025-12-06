@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>侵权提示</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 侵权提示页面 -->
+    <div class="container infringement-container">
+        <div class="infringement-content">
+            <div class="info-icon">i</div>
+            <div class="infringement-title">提示</div>
+            <div class="infringement-text">
+                <p>为高效解决侵权问题，你可以先找对方协商；若协商无效再继续投诉。协商可参考如下步骤：</p>
+                <p>1.与对方联系；</p>
+                <p>2.告知对方违反的规则，并停止侵权行为。详情见<a href="#" class="infringement-notice-link">侵权投诉须知</a>。</p>
+            </div>
+            
+            <div class="btn-group">
+                <button class="i-know-btn">我知道了</button>
+                <button class="continue-btn">继续投诉</button>
+            </div>
+        </div>
+        
+        <!-- 侵权投诉须知页面 -->
+        <div class="infringement-notice-container" style="display: none;">
+            <div class="infringement-notice-header">
+                <div class="back-btn" id="infringement-notice-back">←</div>
+                <div class="infringement-notice-title">侵权投诉须知</div>
+            </div>
+            <div class="infringement-notice-content">
+                <h3>侵权投诉范围</h3>
+                <p>本流程是权利人向对象明确的微信个人账号用户发起的侵权投诉流程，包含的范围为：姓名权侵权，商号权/企业名称权侵权，名誉权/荣誉权/商誉权侵权，肖像权侵权，隐私权侵权，版权/著作权侵权、商标权侵权及专利权侵权等知识产权类侵权。受理场景包括个人账号的头像、昵称、个性签名、朋友圈等。</p>
+                
+                <h3>保证声明</h3>
+                <p>权利人及其代理人应保证在本投诉中的陈述和提供的相关材料皆真实、有效且合法，并承担因本投诉带来的一切法律后果，包括但不限于承担腾讯因根据声明人的投诉对相关账号的处理而给腾讯造成的任何损失。</p>
+                <p>权利人及其代理人保证不滥用投诉，包括但不限于针对同一侵权事实故意反复恶意投诉、批量操作增加系统负荷、明知不构成侵权或明显缺乏基本事实依据而恶意投诉、提交虚假陈述及材料等情形。</p>
+                
+                <h3>处理与反馈</h3>
+                <p>用户的侵权投诉通知送达微信团队并经核实后：</p>
+                <p>1. 对被投诉的内容，将会依据《腾讯微信软件许可及服务协议》、《微信个人账号使用规范》和相关法律法规进行相应处理；</p>
+                <p>2. 对处理结果，将通过“微信团队”公众号对投诉人进行反馈；同时也会通过“微信团队”公众号或微信客户端的系统提示告知被投诉人。</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 获取元素
+        const iKnowBtn = document.querySelector('.i-know-btn');
+        const continueBtn = document.querySelector('.continue-btn');
+        
+        // 侵权投诉须知相关元素
+        const infringementNoticeLink = document.querySelector('.infringement-notice-link');
+        const infringementNoticeContainer = document.querySelector('.infringement-notice-container');
+        const infringementNoticeBackBtn = document.getElementById('infringement-notice-back');
+        
+        // 我知道了按钮点击事件
+        iKnowBtn.addEventListener('click', function() {
+            exitPage();
+        });
+        
+        // 继续投诉按钮点击事件
+        continueBtn.addEventListener('click', function() {
+            window.location.href = 'complaint-type.html';
+        });
+        
+        // 点击侵权投诉须知链接，显示侵权投诉须知页面
+        infringementNoticeLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            infringementNoticeContainer.style.display = 'block';
+        });
+        
+        // 点击返回按钮，返回提示页面
+        infringementNoticeBackBtn.addEventListener('click', function() {
+            infringementNoticeContainer.style.display = 'none';
+        });
+        
+        // 退出页面函数
+        function exitPage() {
+            if (typeof WeixinJSBridge !== 'undefined') {
+                // 微信环境下关闭当前窗口
+                WeixinJSBridge.call('closeWindow');
+            } else {
+                // 其他环境下关闭当前窗口或跳转到空白页
+                window.close();
+                // 如果window.close()不生效，使用以下备选方案
+                setTimeout(function() {
+                    window.location.href = 'about:blank';
+                }, 100);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>选择投诉内容</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 投诉内容选择页面 -->
+    <div class="container complaint-type-container">
+        <div class="complaint-type-title">请选择投诉内容</div>
+        
+        <div class="complaint-type-list">
+            <div class="complaint-type-item">
+                <span>投诉头像 / 昵称等资料</span>
+                <span class="arrow">></span>
+            </div>
+            <div class="complaint-type-item">
+                <span>投诉朋友圈内容</span>
+                <span class="arrow">></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 为投诉内容选项添加点击事件
+        const complaintTypeItems = document.querySelectorAll('.complaint-type-item');
+        if (complaintTypeItems.length > 0) {
+            // 投诉头像 / 昵称等资料
+            complaintTypeItems[0].addEventListener('click', function() {
+                window.location.href = 'rightsholder-type.html';
+            });
+            
+            // 投诉朋友圈内容
+            if (complaintTypeItems.length > 1) {
+                complaintTypeItems[1].addEventListener('click', function() {
+                    window.location.href = 'friend-circle-complaint.html';
+                });
+            }
+        }
+    </script>
+</body>
+</html>

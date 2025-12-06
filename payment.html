@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>选择支付方式</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 支付方式选择页面 -->
+    <div class="container" id="payment-page">
+        <div class="title">请选择被骗资金的支付方式</div>
+        <div class="payment-list">
+            <div class="payment-item">
+                <span>微信支付（红包／转账／群收款／收付款等）</span>
+                <span class="arrow">></span>
+            </div>
+            <div class="payment-item">
+                <span>其他支付方式</span>
+                <span class="arrow">></span>
+            </div>
+            <div class="payment-item">
+                <span>遭遇诈骗，暂无资金损失</span>
+                <span class="arrow">></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 为所有支付方式选项添加点击事件，跳转到submit.html页面
+        const paymentItems = document.querySelectorAll('.payment-item');
+        paymentItems.forEach(function(item) {
+            item.addEventListener('click', function() {
+                window.location.href = 'submit.html';
+            });
+        });
+    </script>
+</body>
+</html>
